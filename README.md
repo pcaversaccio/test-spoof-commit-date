@@ -20,11 +20,13 @@ git commit -m "changed dependency"
 
 ## Example
 
+Let's inspect commit [`3e8db9983cffafb5342ae752fbee4af89dd3efa9`](https://github.com/pcaversaccio/test-spoof-commit-date/commit/3e8db9983cffafb5342ae752fbee4af89dd3efa9):
+
 ```sh
-curl -s https://api.github.com/repos/pcaversaccio/test-spoof-commit-date/commits/b91babe024462be201cf61a7b42e8a6771250b7c | jq '.commit | {author_date: .author.date, committer_date: .committer.date}'
+curl -s https://api.github.com/repos/pcaversaccio/test-spoof-commit-date/commits/3e8db9983cffafb5342ae752fbee4af89dd3efa9 | jq '.commit | {author_date: .author.date, committer_date: .committer.date}'
 ```
 
-will return
+which returns:
 
 ```json
 {
@@ -33,4 +35,4 @@ will return
 }
 ```
 
-The commit was actually pushed at 2026-04-10T08:37:05Z.
+The commit was actually pushed at 2026-04-10T09:11:50Z.

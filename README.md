@@ -1,22 +1,21 @@
 # Git Commit Date Spoofing
 
-Git allows _full_ control over "author date" and "committer date". These values can be set _arbitrarily_ when creating commits.
+Git allows _full_ control over "author date" ([`GIT_AUTHOR_DATE`](https://git-scm.com/docs/git-commit#_commit_information)) and "committer date" ([`GIT_COMMITTER_DATE`](https://git-scm.com/docs/git-commit#_commit_information)). These values can be set _arbitrarily_ when creating commits.
 
-## Linux / macOS (bash/zsh)
+## Linux/macOS (bash/zsh)
 
 ```sh
-GIT_AUTHOR_DATE="2019-07-08T13:21:24Z" \
+~$ GIT_AUTHOR_DATE="2019-07-08T13:21:24Z" \
 GIT_COMMITTER_DATE="2019-07-08T13:21:24Z" \
 git commit -m "changed dependency"
 ```
 
 ## Windows PowerShell
 
-```ps
-$env:GIT_AUTHOR_DATE="2019-07-08T13:21:24Z"
-$env:GIT_COMMITTER_DATE="2019-07-08T13:21:24Z"
-
-git commit -m "changed dependency"
+```powershell
+~$ $env:GIT_AUTHOR_DATE="2019-07-08T13:21:24Z"
+~$ $env:GIT_COMMITTER_DATE="2019-07-08T13:21:24Z"
+~$ git commit -m "changed dependency"
 ```
 
 ## Example
@@ -34,4 +33,4 @@ will return
 }
 ```
 
-I pushed this commit however on 2026-04-10T08:37:05Z in reality.
+The commit was actually pushed at 2026-04-10T08:37:05Z.

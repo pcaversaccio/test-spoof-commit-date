@@ -6,8 +6,8 @@ Git allows _full_ control over "author date" ([`GIT_AUTHOR_DATE`](https://git-sc
 
 ```sh
 ~$ GIT_AUTHOR_DATE="2019-07-08T13:21:24Z" \
-GIT_COMMITTER_DATE="2019-07-08T13:21:24Z" \
-git commit -m "changed dependency"
+   GIT_COMMITTER_DATE="2019-07-08T13:21:24Z" \
+   git commit -m "changed dependency"
 ```
 
 ## Windows PowerShell
